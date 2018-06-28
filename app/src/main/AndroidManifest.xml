@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.slametriyadi.wisataindonesia">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.ProvinsiActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activity.HomeHomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.ProvinsiSecondActivity"
+            android:label="@string/title_activity_main_second"
+            android:parentActivityName=".Activity.ProvinsiActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="id.slametriyadi.wisataindonesia.Activity.ProvinsiActivity" />
+        </activity>
+        <activity android:name=".Activity.ReplaceActivity" />
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.HomeHomeActivity"
+            android:label="@string/title_activity_home_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
